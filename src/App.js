@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import ChatPage from './pages/chatPage';
+import Background from './assests/radek-grzybowski-eBRTYyjwpRY-unsplash.jpg';
 
 function App() {
+
+  const navbar = ( ) => {
+    return (
+      <div className='navbar' >
+        <li className='navbar_elements' > HOME </li>
+        <li className='navbar_elements' > ABOUT US </li>
+        <li className='navbar_elements' > FEEDBACK </li>
+      </div>
+    )
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {navbar()}
+
+      <img src={Background} alt='' className='background_wallpaper' />
+      <ChatPage />
     </div>
   );
 }
