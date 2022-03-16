@@ -1,6 +1,7 @@
 import './App.css';
 import ChatPage from './pages/chatPage';
-import Background from './assests/radek-grzybowski-eBRTYyjwpRY-unsplash.jpg';
+// import Background from './assests/radek-grzybowski-eBRTYyjwpRY-unsplash.jpg';
+import ChatBotAvatar  from './assests/icons8-music-robot-48.png';
 
 function App() {
 
@@ -14,10 +15,14 @@ function App() {
     )
   }
   return (
-    <div className="App">
-      {navbar()}
+    <div className="container">
+     {navbar()}
 
-      <img src={Background} alt='' className='background_wallpaper' />
+     <div style={{display:'flex'}}>
+     <img src={ChatBotAvatar} alt='' className='chatBot_header' />
+       <p className='chatBot_name' >Hii I am Mr. Bot</p>
+     </div>
+     
       <ChatPage />
     </div>
   );
