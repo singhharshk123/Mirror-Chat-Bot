@@ -1,6 +1,5 @@
 import './App.css';
 import ChatPage from './pages/chatPage';
-// import Background from './assests/radek-grzybowski-eBRTYyjwpRY-unsplash.jpg';
 import ChatBotAvatar  from './assests/icons8-music-robot-48.png';
 
 function App() {
