@@ -2,6 +2,7 @@ import './App.css';
 import ChatPage from './pages/chatPage';
 // import Background from './assests/radek-grzybowski-eBRTYyjwpRY-unsplash.jpg';
 import ChatBotAvatar  from './assests/icons8-music-robot-48.png';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
@@ -15,15 +16,23 @@ function App() {
     )
   }
   return (
-    <div className="container">
+    <div className="container row">
+     <div>
      {navbar()}
-
-     <div style={{display:'flex'}}>
-     <img src={ChatBotAvatar} alt='' className='chatBot_header' />
-       <p className='chatBot_name' >Hii I am Mr. Bot</p>
      </div>
+
+    <div className='row'>
+    <div className='col-md-6'>
+    <div className='ChatBot_heading_container row' >
+     <img src={ChatBotAvatar} alt='' className='chatBot_header col-md-2 col-sm-2 col-xs-1' />
+       <p className='chatBot_name col-md-6 col-sm-6 col-xs-6' >Mr. Bot</p>
+     </div>
+    </div>
      
-      <ChatPage />
+     <div className='col-md-6 col-sm-6 col-xs-6' >
+     <ChatPage  />
+     </div>
+    </div>
     </div>
   );
 }
